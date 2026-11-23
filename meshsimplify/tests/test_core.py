@@ -64,6 +64,6 @@ CASES = [("bounds", "_check_bounds"), ("faces", "_check_faces"), ("bad_target", 
 def test_spec(name, check):
     fn = globals().get(check)
     if fn is None:
-        assert Simplify() is not None
+        assert meshsimplify.Simplify() is not None
         return
     assert fn() is True
